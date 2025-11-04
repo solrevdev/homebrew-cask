@@ -1,6 +1,6 @@
 cask "plover" do
-  version "5.0.0"
-  sha256 "fa37dea58136ab3ae8da50f32dc697a59ba45158aa01e7a12e75a99f9a9679bf"
+  version "5.1.0"
+  sha256 "0925e872052601b54fb483cfe08bb92b8126b2a9ca5e523ae61b2bc52a1158b6"
 
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_12_0_universal2.dmg",
       verified: "github.com/openstenoproject/plover/"
@@ -13,8 +13,6 @@ cask "plover" do
     regex(/v?(\d+(?:\.\d+)+[\w.]+)/i)
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Plover.app"
 
